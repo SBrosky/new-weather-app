@@ -1,0 +1,126 @@
+body {
+  max-width: 600px;
+  background-image: url(background-clouds.jpg);
+  color: #363d3f;
+  filter: saturate(3);
+}
+
+.tempToggle {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  position: relative;
+  top: -20px;
+}
+
+a {
+  color: #363d3f;
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.current-button {
+  background: rgba(45, 148, 185, 0.2);
+  font-size: 18px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  padding: 6px 20px;
+  border-radius: 10px;
+  border: 1px solid #363d3f;
+  transition: all 200ms ease-in-out;
+  margin: 10px 0 0 0;
+}
+
+.current-button:hover {
+  background: rgba(181, 179, 227, 0.5);
+  cursor: pointer;
+}
+
+.container {
+  margin: 50px;
+  padding: 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  font-size: 36px;
+  padding: 20px 0 0 0;
+  line-height: 24px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 20 px;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 200;
+}
+
+.change-city-bar {
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 100;
+}
+
+.submit-button {
+  background: rgba(45, 148, 185, 0.2);
+  font-size: 18px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  padding: 6px 20px;
+  border-radius: 10px;
+  border: 1px solid #363d3f;
+  transition: all 200ms ease-in-out;
+}
+
+.submit-button:hover {
+  background: rgba(181, 179, 227, 0.5);
+  cursor: pointer;
+}
+
+.local-weather {
+  padding: 15px 0 0 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: rgba(45, 148, 185, 0.2);
+}
+
+.current-weather {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.weather-details {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.forecast-days {
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+  background: rgba(172, 172, 238, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+}
+
+.forecast-days i {
+  font-size: 24px;
+}
+
+.forecast-temp {
+  font-size: 20px;
+  font-weight: 300;
+}

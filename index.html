@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"/>
+
+    <script
+      src="https://kit.fontawesome.com/32300e5451.js"
+      crossorigin="anonymous">
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    </head>
+
+  <body>
+
+    <div class="container">
+        
+    <form class="change-city-bar" id="change-city">
+      <div class="row">
+        <div class="col-9">
+        <input type="search" placeholder="change city" class="form-control" id="form-control"/>
+        </div>
+        <div class="col-3">
+        <input type="submit" value="Search" class="submit-button">
+        </div>
+    </form>
+    </div>
+
+    <button class="current-button">Current Location</button>
+      
+    <h1>
+      Vancouver, BC
+    </h1>
+    <h2>day and time</h2>
+    <h3 id="description"></h3>
+      
+    <div class="row local-weather">
+        <div class="col-6">
+          <p class="current-weather">
+            <span id="degrees">x°C </span> 
+            <i class="fa-solid fa-sun"></i>
+            <span class="tempToggle">
+              <a href="#" id="celsius">°C</a> 
+              |
+               <a href="#" id="farenheit">°F</a> 
+              </span>
+            </p>
+        </div>
+        <div class="col-6">
+          <p class="weather-details">
+            <div id="precipitation">
+            Precipitation: x%
+            </div>
+            <div id="humidity">
+            Humidity: x%
+            </div>
+            <div id="wind">
+            Wind: xkm/hr
+            </div>
+          </p>
+        </div>
+    </div>
+
+
+    <div class="row forecast-days">
+      <div class="col text-center">
+          Tuesday
+          <div class="forecast-temp">10°C</div>
+          <i class="fa-solid fa-sun"></i>
+      </div>
+      <div class="col text-center">
+          Wednesday
+          <div class="forecast-temp">10°C</div>
+          <i class="fa-solid fa-sun"></i>
+      </div>
+      <div class="col text-center">
+          Thursday
+          <div class="forecast-temp">8°C</div>
+          <i class="fa-solid fa-cloud"></i>
+      </div>
+      <div class="col text-center">
+          Friday
+          <div class="forecast-temp">8°C </div>
+          <i class="fa-solid fa-cloud-sun-rain"></i>
+      </div>
+      <div class="col text-center">
+          Saturday
+          <div class="forecast-temp"> 8°C</div>
+          <i class="fa-solid fa-cloud-sun"></i>
+      </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

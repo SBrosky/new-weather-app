@@ -1,11 +1,14 @@
 function updateTemp(response) {
   console.log(response);
+
+  celsuisTemp = response.data.main.temp;
+
   document.querySelector(
     "h1"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#degrees").innerHTML = `${Math.round(
     response.data.main.temp
-  )} °C`;
+  )} `;
   document.querySelector("#humidity").innerHTML = `Humidity: ${Math.round(
     response.data.main.humidity
   )}%`;
@@ -44,14 +47,18 @@ function handleSubmit(event) {
 
 function toggleTempF(event) {
   event.preventDefault();
-  let temp = document.querySelector("#degrees");
-  temp.innerHTML = `46°F`;
+  document.querySelector("#degrees").innerHTML = Math.round(
+    (celsuisTemp * 9) / 5 + 32
+  );
+  toggleToFTemp.classList.add("active");
+  toggleToCTemp.classList.remove("active");
 }
 
 function toggleTempC(event) {
   event.preventDefault();
-  let temp = document.querySelector("#degrees");
-  temp.innerHTML = `8°C`;
+  document.querySelector("#degrees").innerHTML = Math.round(celsuisTemp);
+  toggleToCTemp.classList.add("active");
+  toggleToFTemp.classList.remove("active");
 }
 
 function getPlace(position) {
@@ -101,5 +108,7 @@ toggleToCTemp.addEventListener("click", toggleTempC);
 
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", getCurrent);
+
+let celsuisTemp = null;
 
 searchCity("Vancouver");

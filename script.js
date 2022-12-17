@@ -73,6 +73,24 @@ function getCurrent() {
   navigator.geolocation.getCurrentPosition(getPlace);
 }
 
+function displayForecast() {
+  let forecastElemnet = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row forecast-days">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col text-center">
+          ${day}
+          <div class="forecast-temp"> 10°C</div>
+          <i class="fa-solid fa-sun"></i>
+        </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElemnet.innerHTML = forecastHTML;
+}
+
 let days = [
   "Sunday",
   "Monday",
@@ -112,3 +130,4 @@ currentButton.addEventListener("click", getCurrent);
 let celsuisTemp = null;
 
 searchCity("Vancouver");
+displayForecast();

@@ -115,13 +115,21 @@ a {
   padding: 10px;
 }
 
-.forecast-days i {
+.forecast-block {
+  text-align: center;
+}
+
+.forecast i {
   font-size: 24px;
 }
 
 .forecast-temp {
   font-size: 20px;
   font-weight: 300;
+}
+
+.forcast-day {
+  text-align: center;
 }
 
 .github-link {

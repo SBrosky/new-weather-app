@@ -6,15 +6,15 @@ body {
   filter: saturate(3);
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .tempToggle {
   font-size: 14px;
   position: relative;
   top: -20px;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: 500;
 }
 
 .current-button {
@@ -147,4 +147,8 @@ a {
   color: #363d3f;
   font-weight: 500;
   text-decoration: none;
+}
+
+.forecastIcon {
+  filter: grayscale(0.6);
 }

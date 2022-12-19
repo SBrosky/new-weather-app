@@ -90,19 +90,26 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row forecast-days">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `
         <div class="col text-center">
+          <div class="day">
           ${formatForecastDay(forecastDay.dt)}
-          <div class="forecast-temp"> ${Math.round(forecastDay.temp.max)} </div>
+          </div>
           <img src= "
           http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png" width= "50"/>
+
+         <div class="forecast-temp"> 
+          <span class="maxTemp"> ${Math.round(forecastDay.temp.max)}° </ span> 
+          <span class="minTemp">${Math.round(forecastDay.temp.min)}° </span>
+         </div>
+          
        
-          </div>`;
+        </div>`;
     }
   });
   forecastHTML = forecastHTML + `</div>`;

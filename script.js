@@ -6,13 +6,13 @@ function updateTemp(response) {
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#degrees").innerHTML = `${Math.round(
     response.data.main.temp
-  )} `;
+  )}°C `;
   document.querySelector("#humidity").innerHTML = `Humidity: ${Math.round(
     response.data.main.humidity
   )}%`;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
-  )}km/hr`;
+  )} km/hr`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document
@@ -42,22 +42,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#form-control").value;
   searchCity(city);
-}
-
-function toggleTempF(event) {
-  event.preventDefault();
-  document.querySelector("#degrees").innerHTML = Math.round(
-    (celsuisTemp * 9) / 5 + 32
-  );
-  toggleToFTemp.classList.add("active");
-  toggleToCTemp.classList.remove("active");
-}
-
-function toggleTempC(event) {
-  event.preventDefault();
-  document.querySelector("#degrees").innerHTML = Math.round(celsuisTemp);
-  toggleToCTemp.classList.add("active");
-  toggleToFTemp.classList.remove("active");
 }
 
 function getPlace(position) {
@@ -144,12 +128,6 @@ if (hour < 12) {
 
 let search = document.querySelector("#change-city");
 search.addEventListener("submit", handleSubmit);
-
-let toggleToFTemp = document.querySelector("#farenheit");
-toggleToFTemp.addEventListener("click", toggleTempF);
-
-let toggleToCTemp = document.querySelector("#celsius");
-toggleToCTemp.addEventListener("click", toggleTempC);
 
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", getCurrent);

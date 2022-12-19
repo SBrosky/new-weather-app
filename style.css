@@ -6,46 +6,10 @@ body {
   filter: saturate(3);
 }
 
-h3 {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.tempToggle {
-  font-size: 14px;
-  position: relative;
-  top: -20px;
-}
-
-.current-button {
-  background: rgba(45, 148, 185, 0.2);
-  font-size: 18px;
-
-  font-weight: 300;
-  padding: 6px 20px;
-  border-radius: 10px;
-  border: 1px solid #363d3f;
-  transition: all 200ms ease-in-out;
-  margin: 10px 0 0 0;
-}
-
-.current-button:hover {
-  background: rgba(181, 179, 227, 0.5);
-  cursor: pointer;
-}
-
-.container {
-  margin: 50px;
-  padding: 30px 30px 10px 30px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
 h1 {
   font-size: 36px;
   padding: 20px 0 0 0;
   line-height: 24px;
-
   font-weight: 500;
 }
 
@@ -53,7 +17,6 @@ h2 {
   font-size: 20px;
   line-height: 20 px;
   padding: 0;
-
   font-weight: 300;
 }
 
@@ -63,6 +26,14 @@ p {
 
 a {
   text-decoration: none;
+  color: blue;
+}
+
+.container {
+  margin: 50px;
+  padding: 30px 30px 10px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .change-city-bar {
@@ -86,6 +57,22 @@ a {
   cursor: pointer;
 }
 
+.current-button {
+  background: rgba(45, 148, 185, 0.2);
+  font-size: 18px;
+  font-weight: 300;
+  padding: 6px 20px;
+  border-radius: 10px;
+  border: 1px solid #363d3f;
+  transition: all 200ms ease-in-out;
+  margin: 10px 0 0 0;
+}
+
+.current-button:hover {
+  background: rgba(181, 179, 227, 0.5);
+  cursor: pointer;
+}
+
 .local-weather {
   padding: 15px 0 0 0;
   border-top-left-radius: 10px;
@@ -98,22 +85,25 @@ a {
   font-weight: 400;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 .weather-details {
   font-size: 16px;
   font-weight: 300;
 }
 
-#description {
-  text-transform: capitalize;
-}
-
 .forecast-days {
   font-size: 16px;
-
   background: rgba(172, 172, 238, 0.5);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 10px;
+}
+
+.forecastIcon {
+  filter: grayscale(0.6);
 }
 
 .forecast-block {
@@ -133,24 +123,6 @@ a {
   font-weight: 300;
 }
 
-.forcast-day {
-  text-align: center;
-}
-
-.github-link {
-  color: blue;
-}
-
 .code-tagline {
   padding: 10px 0 0 0;
-}
-
-.active {
-  color: #363d3f;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.forecastIcon {
-  filter: grayscale(0.6);
 }

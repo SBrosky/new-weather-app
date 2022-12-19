@@ -102,28 +102,30 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+function formatDate() {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let currentTime = new Date();
-let h2 = document.querySelector("h2");
-let day = days[currentTime.getDay()];
-let hour = currentTime.getHours();
-let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-if (hour < 12) {
-  h2.innerHTML = `${day}, ${hour}:${minutes} AM`;
-} else {
-  h2.innerHTML = `${day}, ${hour}:${minutes} PM`;
+  let currentTime = new Date();
+  let h2 = document.querySelector("h2");
+  let day = days[currentTime.getDay()];
+  let hour = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hour < 12) {
+    h2.innerHTML = `${day}, ${hour}:${minutes} AM`;
+  } else {
+    h2.innerHTML = `${day}, ${hour}:${minutes} PM`;
+  }
 }
 
 let search = document.querySelector("#change-city");
@@ -135,3 +137,4 @@ currentButton.addEventListener("click", getCurrent);
 let celsuisTemp = null;
 
 searchCity("Vancouver");
+formatDate();
